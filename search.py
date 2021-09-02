@@ -10,8 +10,10 @@ def search():
     word =input("鬼滅の登場人物の名前を入力してください >>> ")
     
     ### ここに検索ロジックを書く
-
-    print("{}が見つかりした".format(word))
+    if word in source:
+        print("{}が見つかりした".format(word))
+    else:
+        print("存在しません")
 
 if __name__ == "__main__":
     search()
