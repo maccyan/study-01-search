@@ -8,10 +8,14 @@ def search():
     
     ### ここに検索ロジックを書く
     if word in source:
-        print("{}が見つかりした".format(word))
+        print("{}が見つかりました".format(word))
     else:
         print("存在しません")
-#       source.append(word)
+        source.append(word)
+        print(source)
+        with open ( 'source. csv' , 'a' ,encoding='UTF-8') as f :
+            writer = csv . writer ( f )
+            writer . writerow ( [source] )
 
 
 if __name__ == "__main__":
